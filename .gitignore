@@ -1,3 +1,5 @@
-/.idea/
-/zikywawa.iml
+/*.idea/
+/*.iml
 /target/
+/**/target/
+/**/*.iml
