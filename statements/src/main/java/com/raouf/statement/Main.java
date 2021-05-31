@@ -9,8 +9,9 @@ public class Main {
     }
     public static void main(String[] args) {
         Task7 task7 = new Task7();
-//        task7.execute();
-        double radians = Math.acos(0.6);
-        System.out.println(Math.toDegrees(0.99987));
+        Task16 task16 = new Task16();
+        task16.execute();
+//        double radians = Math.acos(0.6);
+//        System.out.println(Math.toDegrees(0.99987));
     }
 }
