@@ -33,7 +33,7 @@ public class Task16 {
         double radians = 0;
         double hypotenuse = Math.sqrt(x) + Math.sqrt(y);
         radians = Math.cos(y) / Math.cos(hypotenuse);
-        System.out.println(Math.toDegrees(radians));
+        System.out.println("radians: " + Math.toDegrees(radians));
 
     }
 }
