@@ -18,7 +18,7 @@ public class Task16 {
                 x = scan.nextInt();
             }catch (Exception e){
                 scan.nextLine();
-                LOGGER.error(e.getMessage());
+                System.out.println("Enter Only Numbers!");
             }
         }
         while (y == null){
@@ -27,12 +27,12 @@ public class Task16 {
                 y = scan.nextInt();
             }catch (Exception e){
                 scan.nextLine();
-                LOGGER.error(e.getMessage());
+                System.out.println("Enter Only Numbers!");
             }
         }
         double radians = 0;
-        double hypotenuse = Math.sqrt(x) + Math.sqrt(y);
-        radians = Math.cos(y) / Math.cos(hypotenuse);
+        double hypotenuse = Math.sqrt(Math.pow(x,2) + Math.pow(y,2));
+        radians = Math.acos(x /hypotenuse);
         System.out.println("radians: " + Math.toDegrees(radians));
 
     }
