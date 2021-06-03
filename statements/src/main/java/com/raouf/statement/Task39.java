@@ -20,11 +20,10 @@ public class Task39 {
                 System.out.println("Enter Only Number!!");
             }
         }
-        double res = 0;
         if (x >= 8){
-            System.out.println("result is: " + (-Math.pow(x,2)- (x-9)));
+            System.out.println("result if x >= 8 = " + (-Math.pow(x,2)- (x-9)));
         }else {
-            System.out.println("result is: " + (1/Math.pow(x,4)- 6));
+            System.out.println("result is if x < 8 = " + (1/Math.pow(x,4)- 6));
         }
     }
 
