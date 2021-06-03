@@ -12,7 +12,8 @@ public class Main {
         Task16 task16 = new Task16();
         Task23 task23 = new Task23();
         Task31 task31 = new Task31();
-        task31.execute();
+        Task39 task39 = new Task39();
+        task39.execute();
 //        double radians = Math.acos(0.6);
 //        System.out.println(Math.toDegrees(0.99987));
     }
