@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 
 import java.util.Scanner;
 
+import static java.lang.Math.max;
 import static java.lang.Math.pow;
 
 public class Task31 {
@@ -13,15 +14,15 @@ public class Task31 {
     public void execute() {
         LOGGER.info("task 31 has been started!");
         Scanner scan = new Scanner(System.in);
-        Integer a = null;
-        Integer b = null;
+        Double a = null;
+        Double b = null;
         Double x = null;
         Double y = null;
         Double z = null;
         while (a == null){
             try {
                 System.out.println("Enter a: ");
-                a = scan.nextInt();
+                a = scan.nextDouble();
             }catch (Exception e){
                 scan.nextLine();
                 System.out.println("Only Numbers!!! ");
@@ -30,7 +31,7 @@ public class Task31 {
         while (b == null){
             try {
                 System.out.println("Enter b: ");
-                b = scan.nextInt();
+                b = scan.nextDouble();
             }catch (Exception e){
                 scan.nextLine();
                 System.out.println("Only Numbers!!! ");
@@ -67,10 +68,21 @@ public class Task31 {
         boolean result = false;
 
         double halfPerimeter = (x + y + z) /2.;
-        double areaTriangle =Math.sqrt (halfPerimeter *(halfPerimeter - x)*(halfPerimeter - y)*(halfPerimeter - z));
-        double triangleHeight =(2 * areaTriangle)/x;
+        double x1 = Math.abs(halfPerimeter - x);
+        double y1 = Math.abs(halfPerimeter - y);
+        double z1 = Math.abs(halfPerimeter - z);
+        System.out.println(x1 + " " + y1 + " " + z1);
+        double temp = x1;
+        if (y1 > temp){
+            temp = y1;
+        }
+        if(z1 > temp){
+            temp = z1;
+        }
+        double areaTriangle =Math.sqrt (Math.abs(halfPerimeter * x1 * y1 * z1));
+        double triangleHeight =(2 * areaTriangle)/temp;
         double rectangleDiameter = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
-        if (triangleHeight < rectangleDiameter){
+        if (triangleHeight <= rectangleDiameter){
             result = true;
         }
         System.out.println("halfPerimeter: " + halfPerimeter);
