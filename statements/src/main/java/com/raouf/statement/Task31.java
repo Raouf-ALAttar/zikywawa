@@ -54,18 +54,10 @@ public class Task31 {
                 System.out.println("Only Numbers!!!");
             }
         }
-//        while (z == null){
-//            try {
-//                System.out.println("Enter z: ");
-//                z = scan.nextInt();
-//            }catch (Exception e){
-//                scan.nextLine();
-//                System.out.println("Only Numbers!!! ");
-//            }
-//        }
+
         boolean result = false;
-        double triangleHeight = pow(x,2) - pow(y,2);
-//        (a * Math.sqrt(3))/2;
+        double areaTriangle = 1/2. *x *y;
+        double triangleHeight =(2 * areaTriangle)/x;
         double rectangleDiameter = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
         if (triangleHeight < rectangleDiameter){
             result = true;
