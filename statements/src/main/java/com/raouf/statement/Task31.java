@@ -15,9 +15,9 @@ public class Task31 {
         Scanner scan = new Scanner(System.in);
         Integer a = null;
         Integer b = null;
-        Integer x = null;
-        Integer y = null;
-        Integer z = null;
+        Double x = null;
+        Double y = null;
+        Double z = null;
         while (a == null){
             try {
                 System.out.println("Enter a: ");
@@ -39,7 +39,7 @@ public class Task31 {
         while (x == null){
             try {
                 System.out.println("Enter x: ");
-                x = scan.nextInt();
+                x = scan.nextDouble();
             }catch (Exception e){
                 scan.nextLine();
                 System.out.println("Only Numbers!!! ");
@@ -48,7 +48,16 @@ public class Task31 {
         while (y == null){
             try {
                 System.out.println("Enter y: ");
-                y = scan.nextInt();
+                y = scan.nextDouble();
+            }catch (Exception e){
+                scan.nextLine();
+                System.out.println("Only Numbers!!!");
+            }
+        }
+        while (z == null){
+            try {
+                System.out.println("Enter z: ");
+                z = scan.nextDouble();
             }catch (Exception e){
                 scan.nextLine();
                 System.out.println("Only Numbers!!!");
@@ -56,12 +65,18 @@ public class Task31 {
         }
 
         boolean result = false;
-        double areaTriangle = 1/2. *x *y;
+
+        double halfPerimeter = (x + y + z) /2.;
+        double areaTriangle =Math.sqrt (halfPerimeter *(halfPerimeter - x)*(halfPerimeter - y)*(halfPerimeter - z));
         double triangleHeight =(2 * areaTriangle)/x;
         double rectangleDiameter = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
         if (triangleHeight < rectangleDiameter){
             result = true;
         }
-        System.out.println("Result Is: " + result);
+        System.out.println("halfPerimeter: " + halfPerimeter);
+        System.out.println("areaTriangle: " + areaTriangle);
+        System.out.println("triangleHeight: " + triangleHeight);
+        System.out.println("rectangleDiameter: " + rectangleDiameter);
+        System.out.println("Result Is: " +result );
     }
 }
