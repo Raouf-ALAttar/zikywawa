@@ -10,20 +10,20 @@ public class Task39 {
     public void execute(){
         LOGGER.info("Task 39 Has Been Started!");
         Scanner scan = new Scanner(System.in);
-        Integer x = null;
+        Double x = null;
         while (x == null){
             try {
                 System.out.println("Enter x: ");
-                x = scan.nextInt();
+                x = scan.nextDouble();
             }catch (Exception e){
                 scan.nextLine();
                 System.out.println("Enter Only Number!!");
             }
         }
         if (x >= 8){
-            System.out.println("result if x >= 8 = " + (-Math.pow(x,2)- (x-9)));
+            System.out.println("result if x >= 8 = " + (Math.pow(-x,2)+ x - 9));
         }else {
-            System.out.println("result is if x < 8 = " + (1/Math.pow(x,4)- 6));
+            System.out.println("result is if x < 8 = " +1/(Math.pow(x,4) - 6));
         }
     }
 
