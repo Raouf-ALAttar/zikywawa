@@ -5,8 +5,9 @@ import org.apache.log4j.Logger;
 
 import java.util.Scanner;
 
-public class Task16 {
+public class Task16 extends Task {
     public static final Logger LOGGER = LogManager.getLogger(Task16.class);
+
     public void execute () {
         LOGGER.info("task 16 has been started!");
         Scanner scan = new Scanner(System.in);
@@ -36,4 +37,5 @@ public class Task16 {
         System.out.println("radians: " + Math.toDegrees(radians));
 
     }
+
 }

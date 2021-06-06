@@ -8,7 +8,7 @@ import java.util.Scanner;
 import static java.lang.Math.max;
 import static java.lang.Math.pow;
 
-public class Task31 {
+public class Task31 extends Task {
     public static final Logger LOGGER = LogManager.getLogger(Task31.class);
 
     public void execute() {

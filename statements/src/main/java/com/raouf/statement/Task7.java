@@ -7,8 +7,9 @@ import org.apache.log4j.LogManager;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Task7 {
+public class Task7 extends Task {
     public static final Logger LOGGER = LogManager.getLogger(Task7.class);
+
 
     public void execute() {
         LOGGER.info("task 7 has been started!");
@@ -59,6 +60,8 @@ public class Task7 {
 
 
     }
+
+
 
 
 }

@@ -5,8 +5,9 @@ import org.apache.log4j.Logger;
 
 import java.util.Scanner;
 
-public class Task39 {
+public class Task39 extends Task {
     public static final Logger LOGGER = LogManager.getLogger(Task39.class);
+
     public void execute(){
         LOGGER.info("Task 39 Has Been Started!");
         Scanner scan = new Scanner(System.in);
@@ -26,5 +27,4 @@ public class Task39 {
             System.out.println("result is if x < 8 = " +1/(Math.pow(x,4) - 6));
         }
     }
-
 }

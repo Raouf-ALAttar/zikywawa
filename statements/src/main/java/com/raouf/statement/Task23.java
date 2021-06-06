@@ -7,8 +7,9 @@ import sun.util.resources.cldr.CalendarData;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class Task23 {
+public class Task23 extends Task {
     public static final Logger LOGGER = LogManager.getLogger(Task23.class);
+
     public void execute(){
         LOGGER.info("task 23 has been started!");
         Scanner scan = new Scanner(System.in);
@@ -46,4 +47,5 @@ public class Task23 {
         }
         System.out.println(res);
     }
+
 }
